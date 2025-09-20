@@ -1,0 +1,59 @@
+.sliderArrows {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+/* кнопка normal */
+.arrowButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  background-color: var(--color-neutral-lightest);
+  border: 1px solid var(--opacity-neutral-darkest-15);
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.arrow {
+  width: 24px;
+  height: 24px;
+  fill: var(--color-neutral-darkest);
+  transition: fill var(--transition-base);
+}
+
+/* кнопка при hover /focus */
+.arrowButton:hover,
+.arrowButton:focus {
+  outline: none;
+  border-color: var(--color-royal-blue-light);
+  background-color: var(--color-royal-blue-lighter);
+}
+
+/* кнопка active */
+.arrowButton:active {
+  background-color: var(--color-royal-blue-light);
+  border-color: var(--color-royal-blue-light);
+}
+
+/* кнопка disabled */
+.arrowButton:disabled {
+  background-color: var(--color-neutral-lightest);
+  border-color: var(--opacity-neutral-darkest-15);
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.arrowButton:disabled .arrow {
+  fill: var(--color-neutral-darkest);
+}
+
+.arrowButton:disabled:hover,
+.arrowButton:disabled:focus {
+  background-color: var(--color-neutral-lightest);
+  border-color: var(--opacity-neutral-darkest-15);
+  cursor: not-allowed;
+}
