@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&display=swap');
+
+.travelerCart {
+  border: 0px solid var(--color-scheme-1-border);
+  border-radius: 16px;
+  width: 416px;
+  height: auto;
+  background: var(--color-scheme-2-foreground);
+  margin-left: 25px;
+}
+.trevelerInfo {
+  padding: 24px;
+  width: 416px;
+  height: auto;
+}
+.blogInfoWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.category {
+  font-family: var(--font-family);
+  font-weight: 600;
+
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--color-neutral-darkest);
+}
+.blogTittle {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 25px;
+  /* here must be 26px */
+  line-height: 150%;
+  color: var(--color-scheme-1-text);
+}
+.blogInfo {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  color: var(--color-scheme-1-text);
+}
+.travelerImg {
+  width: 416px;
+  height: 277px;
+  object-fit: cover;
+  border-radius: 16px 16px 0px 0px;
+}
+.travelerDetails {
+  width: 368px;
+  height: 54px;
+  display: flex;
+  gap: 16px;
+  margin-top: 24px;
+}
+.travelerDetailsImg {
+  width: 48px;
+  height: 48px;
+  border-radius: 100%;
+}
+.btnState {
+  border: 1px solid var(--color-scheme-2-border);
+  border-radius: 8px;
+  padding: 6px 12px;
+  width: 310px;
+  height: 48px;
+  background: var(--opacity-neutral-darkest-5);
+}
+.btnIcon {
+  border: 1px solid var(--color-scheme-2-border);
+  border-radius: 8px;
+  padding: 6px;
+  width: 48px;
+  height: 48px;
+  background: var(--opacity-neutral-darkest-5);
+}
+.trevelLink {
+  display: flex;
+  gap: 10px;
+  margin-top: 24px;
+  /* margin-bottom: 24px; */
+}
+.icon {
+  margin: auto;
+  width: 24px;
+  height: 25px;
+}
+.spanViews {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  color: var(--color-scheme-1-text);
+  margin-left: 8px;
+  margin-right: 3px;
+}
+.dateViews {
+  display: flex;
+
+  align-items: center;
+}
+.views {
+  display: flex;
+}
+.btnIcon .icon {
+  filter: invert(0); /* обычный цвет */
+}
+.btnIcon.active {
+  background: var(--color-royal-blue-darker);
+}
+.btnIcon.active .icon {
+  filter: invert(1); /* делает белым */
+}
