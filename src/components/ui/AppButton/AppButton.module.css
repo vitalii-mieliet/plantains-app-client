@@ -1,10 +1,8 @@
 /* shared */
 
 .base {
-  display: inline-block;
   border-radius: 8px;
 
-  width: fit-content;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,6 +19,12 @@
 .button:disabled {
   opacity: 0.3;
   cursor: not-allowed;
+}
+
+.init {
+  border: 1px solid var(--color-scheme-2-border);
+  background: var(--opacity-white-10);
+  color: var(--color-white);
 }
 
 /* blue  */
