@@ -1,4 +1,3 @@
-import React from 'react';
 import clsx from 'clsx';
 import s from './AppButton.module.css';
 
@@ -36,10 +35,13 @@ const AppButton = ({
   variant = 'blue',
   type = 'button',
   href,
+  className,
+  onClick,
   ...rest
 }) => {
   const commonProps = {
-    className: clsx(s.base, s[variant]),
+    className: clsx(s.base, s[variant], className && className),
+    onClick: { onClick },
     style: { width, height },
     ...rest,
   };
