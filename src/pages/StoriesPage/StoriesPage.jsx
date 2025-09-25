@@ -8,14 +8,16 @@ import Loader from '../../components/common/Loader/Loader';
 import AppMessage from '../../components/common/AppMessage/AppMessage';
 import AppButton from '../../components/ui/AppButton/AppButton';
 import styles from './StoriesPage.module.css';  
+import { useStoriesPerPage } from '../../hooks/useStoriesPerPage';
 
-const STORIES_PER_PAGE = 9;
+
 const CATEGORIES = ["Всі історії", "Європа", "Азія", "Пустелі", "Африка"];
 
 const StoriesPage = () => {
   const dispatch = useDispatch();
   const [page, setPage] = useState(1);
   const [activeCategory, setActiveCategory] = useState(CATEGORIES[0]);
+  const storiesPerPage = useStoriesPerPage();
 
   const {
     items: stories,
@@ -27,14 +29,14 @@ const StoriesPage = () => {
 
   useEffect(() => {
     if (itemsStatus === 'idle') {
-      dispatch(fetchStories({ page: 1, limit: STORIES_PER_PAGE }));
+      dispatch(fetchStories({ page: 1, perPage: storiesPerPage }));
     }
-  }, [dispatch, itemsStatus]);
+  }, [dispatch, itemsStatus, storiesPerPage]); 
 
   const handleLoadMore = () => {
     const nextPage = page + 1;
     setPage(nextPage);
-    dispatch(fetchStories({ page: nextPage, limit: STORIES_PER_PAGE }));
+    dispatch(fetchStories({ page: nextPage, perPage: storiesPerPage }));
   };
 
   const isLoading = itemsStatus === 'loading';
