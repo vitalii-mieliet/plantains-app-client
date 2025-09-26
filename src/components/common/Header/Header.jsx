@@ -122,7 +122,7 @@ const Header = () => {
                         navLinks={extendedNavLinks}
                       />
                       <div className={s.descktopWrapBtn}>
-                        <AppButton className={s.publish} href="/new-story">
+                        <AppButton className={s.publish} to="/new-story">
                           Опублікувати&#160;історію
                         </AppButton>
                         <UserBar isLoggedIn={isLoggedIn} user={user} />
