@@ -1,0 +1,60 @@
+.socialIcon {
+  display: block;
+  fill: currentColor;
+  transition:
+    color var(--transition-base),
+    border-color var(--transition-base),
+    background-color var(--transition-base);
+}
+
+.socials {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+}
+
+.link {
+  outline: none;
+}
+.sm {
+  width: 24px;
+  height: 24px;
+}
+
+.md {
+  width: 32px;
+  height: 32px;
+}
+
+.lg {
+  width: 40px;
+  height: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .socials {
+    gap: 12px;
+  }
+
+  .sm {
+    width: 20px;
+    height: 20px;
+  }
+
+  .md {
+    width: 24px;
+    height: 24px;
+  }
+
+  .lg {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+.link:focus-visible .socialIcon {
+  border: 1px solid var(--color-scheme-1-text);
+  border-radius: 8px;
+}

@@ -1,0 +1,28 @@
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.title {
+  font-weight: 700;
+  width: 300px;
+  font-size: 28px;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  text-align: center;
+  color: var(--color-scheme-1-text);
+  margin-bottom: 24px;
+}
+
+@media screen and (min-width: 768px) {
+  .title {
+    width: 644px;
+    font-size: 44px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .title {
+    width: 594px;
+    font-size: 52px;
+  }
+}

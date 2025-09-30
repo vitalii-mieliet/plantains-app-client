@@ -1,0 +1,32 @@
+.cardsGrid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: 1fr; /* по умолчанию 1 колонка */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cardItem {
+  display: flex;
+  width: 100%; /* чтобы карточка тянулась */
+}
+
+/* планшет */
+@media (min-width: 768px) {
+  .cardsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* десктоп */
+@media (min-width: 1440px) {
+  .cardsGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (min-width: 1600px) {
+  .cardsGrid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}

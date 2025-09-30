@@ -1,0 +1,55 @@
+.userBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #999;
+  overflow: hidden;
+}
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (min-width: 1440px) {
+  .white {
+    color: var(--color-white);
+  }
+
+  .black {
+    color: var(--color-scheme-2-text);
+  }
+
+  .logoutBtnHome,
+  .logoutBtnOut {
+    transition:
+      background-color var(--transition-base),
+      border-color var(--transition-base);
+  }
+
+  .logoutBtnHome:hover,
+  .logoutBtnHome:focus {
+    outline: none;
+    border-radius: 8px;
+    padding: 5px;
+    border: 1px solid #fff;
+  }
+
+  .logoutBtnOut:hover,
+  .logoutBtnOut:focus {
+    outline: none;
+    border-radius: 8px;
+    padding: 5px;
+    border: 1px solid var(--color-scheme-1-text);
+  }
+}

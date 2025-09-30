@@ -1,0 +1,27 @@
+.tabs {
+  margin-top: 32px;
+  margin-bottom: 40px;
+}
+.tabs .travellerInfo {
+  margin-bottom: 32px; /* мобилка по умолчанию */
+}
+
+.editButton {
+  height: 48px;
+  margin-bottom: 40px;
+}
+
+@media (min-width: 768px) {
+  .boxTab {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .travellerInfo {
+    margin-bottom: 48px; /* планшет/десктоп */
+  }
+
+  .editButton {
+    margin-top: 32px;
+  }
+}

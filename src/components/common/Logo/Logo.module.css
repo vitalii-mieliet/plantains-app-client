@@ -1,0 +1,17 @@
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+
+.logoIcon {
+  transition: fill 0.3s ease;
+}
+
+.logo--light .logoIcon {
+  fill: var(--color-white);
+}
+
+.logo--dark .logoIcon {
+  fill: var(--color-scheme-1-text);
+}

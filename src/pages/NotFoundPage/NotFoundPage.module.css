@@ -1,0 +1,85 @@
+.actions {
+  padding-top: 32px;
+}
+
+.contentWrapper {
+  padding-top: 32px;
+  padding-bottom: 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px; /* відступи між блоками */
+}
+
+.errorMessage {
+  text-align: center;
+}
+
+/*  404 */
+.number {
+  font-weight: 700;
+  font-size: 28px; /* mobile */
+  line-height: 120%;
+  letter-spacing: -0.01em;
+  color: var(--color-scheme-2-text);
+  margin: 0;
+}
+
+/* текст */
+.errorMessageTitle {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 150%;
+  color: var(--color-scheme-1-text);
+}
+
+.errorMessageDescription {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--color-scheme-1-text);
+  margin-top: 16px;
+}
+
+/* пікчер */
+
+.notFoundImage {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 24px;
+  filter: brightness(0.8);
+}
+
+/* адаптивна версія */
+@media screen and (min-width: 768px) {
+  .number {
+    font-size: 44px;
+  }
+
+  .contentWrapper {
+    gap: 32px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .actions {
+    padding-top: 48px;
+  }
+
+  .number {
+    font-size: 52px;
+  }
+
+  .errorMessageTitle {
+    font-size: 32px;
+  }
+
+  .errorMessageDescription {
+    font-size: 20px;
+  }
+
+  .contentWrapper {
+    padding-bottom: 72px;
+    gap: 48px;
+  }
+}

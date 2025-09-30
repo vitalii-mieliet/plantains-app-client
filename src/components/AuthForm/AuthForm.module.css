@@ -1,0 +1,24 @@
+.fieldsWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--color-neutral-darkest);
+  margin-bottom: 8px;
+}
+@media (min-width: 1440px) {
+  .label {
+    font-size: 18px;
+  }
+}

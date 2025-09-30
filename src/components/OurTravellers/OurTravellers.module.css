@@ -1,0 +1,33 @@
+.sectionTitle {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: var(--color-neutral-darkest);
+  padding-bottom: 48px;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  gap: 20px;
+}
+
+/* адаптивна версія*/
+
+@media screen and (min-width: 768px) {
+  .sectionTitle {
+    font-size: 44px;
+  }
+
+  .actions {
+    margin-top: 48px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .sectionTitle {
+    font-size: 52px;
+  }
+}

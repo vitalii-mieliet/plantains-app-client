@@ -1,0 +1,146 @@
+.storiesSection {
+  margin-top: 73px;
+  padding-top: 32px;
+  padding-bottom: 64px;
+}
+
+.storiesContent {
+  text-align: center;
+}
+
+.title {
+  font-family: var(--second-family);
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 110%;
+  letter-spacing: -0.01em;
+  text-align: center;
+  color: var(--color-scheme-1-text);
+
+  max-width: 240px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  color: var(--color-neutral-darkest);
+}
+
+.selectTitle {
+  display: block;
+  text-align: left;
+  margin-bottom: 8px;
+  color: var(--color-scheme-1-text);
+}
+
+.selectWrapper {
+  border: 1px solid var(--opacity-neutral-darkest-15);
+  border-radius: 8px;
+  width: 335px;
+  height: 40px;
+  background: var(--opacity-transparent);
+  margin-bottom: 40px;
+}
+
+.selectCategory {
+  border: none;
+  width: 326px;
+  height: 40px;
+  outline: none;
+  background: none;
+}
+
+.mobileFilter {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px; 
+}
+
+.filterButtons {
+  position: sticky;
+  top: -2px;
+  z-index: 10;
+  background-color: #f7f9ff;
+  padding: 5px 0;
+
+  width: 100%;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.filterButtonActive {
+  background-color: var(--color-neutral-lighter);
+}
+
+.showMoreBtn {
+  font-family: var(--font-family);
+  font-size: 16px;
+  color: var(--color-white);
+
+  max-width: 100%;
+  width: 335px;
+  min-height: 48px;
+}
+
+.filterButton {
+  border: 1px solid var(--opacity-transparent);
+  border-radius: 8px;
+  font-weight: 500;
+  color: var(--color-neutral-darkest);
+  transition: background-color var(--transition-base);
+}
+
+.filterButton:hover {
+  background-color: var(--color-neutral-lighter);
+}
+
+@media (min-width: 768px) {
+  .title {
+    max-width: fit-content;
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+
+  .filterButton {
+    padding: 6px 12px;
+    height: 36px;
+    font-size: 16px;
+  }
+
+  .showMoreBtn {
+    width: fit-content;
+    padding: 0;
+    width: 123px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .storiesSection {
+    padding-top: 48px;
+  }
+
+  .title {
+    font-size: 56px;
+  }
+
+  .filterButton {
+    height: 39px;
+    font-size: 18px;
+  }
+}
+
+.filterButtons {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .filterButtons {
+    display: flex;
+  }
+}
+
+.buttonWrapper {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}

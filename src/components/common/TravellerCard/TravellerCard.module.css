@@ -1,0 +1,65 @@
+.travelerInfoCard {
+  border-radius: 16px;
+  padding: 24px;
+  width: 100%;
+  height: 100%;
+  min-width: 250px;
+  background: var(--color-scheme-2-foreground);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 363px;
+}
+
+.bio {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+
+  line-height: 150%;
+  color: var(--color-scheme-2-text);
+
+  height: 77px;
+  margin-bottom: 16px;
+}
+
+.btn a {
+  height: 48px;
+}
+
+@media (min-width: 768px) {
+  .travelerInfoCard {
+    min-height: 384px;
+  }
+}
+.imgPlaceholder {
+  border-radius: 50%;
+  margin-bottom: 24px;
+  margin-right: auto;
+  min-height: 112px;
+}
+
+.infoBlock {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* растягиваем блок по высоте */
+  width: 100%;
+  max-width: 287px;
+}
+.name {
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 150%;
+  margin-bottom: 16px;
+}
+
+.job {
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
+.description {
+  font-size: 18px;
+  margin-bottom: 16px;
+}

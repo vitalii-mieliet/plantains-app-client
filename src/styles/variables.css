@@ -3,6 +3,8 @@
   --font-family: 'Nunito Sans', sans-serif;
   --second-family: 'Sora', 'Nunito Sans', sans-serif;
 
+  --transition-base: 0.3s ease-in-out;
+
   /* breakpoints */
   --bp-mobile: 375px;
   --bp-tablet: 768px;

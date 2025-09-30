@@ -1,0 +1,19 @@
+.nav {
+  margin: 0 auto;
+}
+.navList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 24px;
+}
+
+@media screen and (min-width: 768px) {
+  .navList {
+    flex-direction: row;
+    gap: 16px;
+    margin: auto;
+  }
+}

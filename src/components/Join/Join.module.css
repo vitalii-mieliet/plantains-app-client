@@ -1,0 +1,76 @@
+#join-section {
+  scroll-margin-top: 300px; /* висота твого фіксованого хедера */
+}
+
+.bcgImage {
+  border: 1px solid var(--color-scheme-1-border);
+  border-radius: 24px;
+  padding: 20px;
+  background-image: url('../../assets/images/join/join-mobile.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media screen and (min-resolution: 192dpi) {
+  .bcgImage {
+    background-image: url('../../assets/images/join/join-mobile@2x.webp');
+  }
+}
+
+.title {
+  font-size: 26px;
+  color: var(--color-white);
+  margin-bottom: 16px;
+}
+
+.text {
+  color: var(--color-white);
+  margin-bottom: 24px;
+}
+
+@media screen and (min-width: 768px) {
+  .bcgImage {
+    background-image: url('../../assets/images/join/join-tablet.webp');
+    padding: 32px;
+  }
+
+  .title {
+    font-size: 32px;
+    width: 500px;
+    margin-bottom: 8px;
+  }
+
+  .text {
+    width: 558px;
+    margin-bottom: 16px;
+  }
+}
+
+@media screen and (min-width: 768px) and (min-resolution: 192dpi) {
+  .bcgImage {
+    background-image: url('../../assets/images/join/join-tablet@2x.webp');
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .bcgImage {
+    background-image: url('../../assets/images/join/join-desktop.webp');
+    padding: 64px 78px;
+  }
+
+  .title {
+    font-size: 48px;
+    margin-bottom: 24px;
+  }
+
+  .text {
+    font-size: 20px;
+    margin-bottom: 32px;
+  }
+}
+
+@media screen and (min-width: 1440px) and (min-resolution: 192dpi) {
+  .bcgImage {
+    background-image: url('../../assets/images/join/join-desktop@2x.webp');
+  }
+}

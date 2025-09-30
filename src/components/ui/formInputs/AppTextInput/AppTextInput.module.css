@@ -1,0 +1,42 @@
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+  width: 100%;
+  padding: 8px 8px;
+  font-weight: 400;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid var(--opacity-neutral-darkest-15);
+  background-color: var(--opacity-white-60);
+  transition: border-color var(--transition-base);
+  box-sizing: border-box;
+
+  &:focus {
+    outline: none;
+    border-color: var(--color-royal-blue);
+  }
+
+  &::placeholder {
+    color: var(--opacity-neutral-darkest-60);
+  }
+}
+
+.inputError {
+  border-color: var(--color-red);
+  color: var(--color-red);
+
+  &:focus {
+    border-color: var(--color-red);
+  }
+}
+
+.errorMessage {
+  display: block;
+  min-height: 18px; /* зарезервована висота для помилки */
+  margin-top: 8px;
+  font-size: 12px;
+  color: var(--color-red);
+}

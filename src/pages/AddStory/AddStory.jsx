@@ -1,5 +1,11 @@
+import AddStoryForm from '../../components/AddStoryForm/AddStoryForm';
+
 const AddStory = () => {
-  return <div>AddStory</div>;
+  return (
+    <div>
+      <AddStoryForm />
+    </div>
+  );
 };
 
 export default AddStory;

@@ -1,0 +1,94 @@
+.formBoxDesktop {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.inputBox {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+}
+.error {
+  position: absolute;
+  bottom: -24px;
+  font-size: 16px;
+  color: var(--color-red);
+}
+.appButtonBox {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.tittle {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: var(--color-neutral-darkest);
+  padding-bottom: 32px;
+}
+
+.label {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--color-neutral-darkest);
+}
+
+.photo {
+  border-radius: 16px;
+  max-width: 335px;
+  max-height: 223px;
+  object-fit: cover;
+  object-position: center;
+  margin-bottom: 24px;
+  margin-top: 8px;
+}
+
+.uploadInput {
+  display: none;
+}
+
+.symbol {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--color-neutral-darkest);
+}
+
+.textArea {
+  height: 120px;
+}
+
+@media screen and (min-width: 768px) {
+  .photo {
+    max-width: 704px;
+    max-height: 469px;
+  }
+  .appButtonBox {
+    margin-top: 24px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .photo {
+    max-width: 865px;
+    max-height: 576px;
+  }
+  .formBox {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+  }
+
+  .appButtonBox {
+    width: 423px;
+    margin-top: 36px;
+  }
+
+  .inputBox {
+    max-width: 865px;
+  }
+}

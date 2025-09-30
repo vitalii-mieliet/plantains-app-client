@@ -1,0 +1,61 @@
+/* #region mobile */
+
+.travellerInfo {
+  margin-top: 32px;
+}
+
+/* history */
+.historySection {
+  padding: 32px 0 64px;
+}
+
+.title {
+  font-family: var(--second-family);
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 120%;
+  letter-spacing: -0.01em;
+  color: var(--color-scheme-1-text);
+  margin-bottom: 40px;
+}
+
+.wrapBtn {
+  margin-top: 40px;
+}
+
+.wrapBtn .showMoreBtn {
+  align-items: center;
+  width: 100%;
+  height: 48px;
+}
+
+/* #endregion mobile */
+
+/* #region tablet */
+@media screen and (min-width: 768px) {
+  .messageWrap {
+    max-width: 533px;
+  }
+
+  .wrapBtn {
+    max-width: 123px;
+    margin: 0 auto;
+    margin-top: 40px;
+  }
+}
+
+/* #endregion tablet */
+
+/* #region desk */
+
+@media screen and (min-width: 1440px) {
+  .travellerInfo {
+    padding-top: 48px;
+  }
+
+  .historySection {
+    padding: 48px 0 72px;
+  }
+}
+
+/* #endregion desk */

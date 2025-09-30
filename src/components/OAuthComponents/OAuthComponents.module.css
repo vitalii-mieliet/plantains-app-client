@@ -1,0 +1,25 @@
+.container {
+  width: 100%;
+}
+
+.aboText {
+  text-align: center;
+  padding: 12px 0;
+}
+
+.buttonContent {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+@media (min-width: 375px) {
+  .container {
+    width: 335px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    width: 644px;
+  }
+}

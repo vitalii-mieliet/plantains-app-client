@@ -8,6 +8,7 @@
 
 html {
   font-size: 16px;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -22,7 +23,7 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
-@media (min-width: var(--bp-desktop)) {
+@media (min-width: 1440px) {
   body {
     font-size: 18px;
   }
@@ -39,13 +40,13 @@ h1 {
   margin: 0;
 }
 
-@media (min-width: var(--bp-tablet)) {
+@media (min-width: 768px) {
   h1 {
     font-size: 48px;
   } /* tablet */
 }
 
-@media (min-width: var(--bp-desktop)) {
+@media (min-width: 1440px) {
   h1 {
     font-size: 56px;
   } /* desktop */
@@ -62,13 +63,13 @@ h2 {
   margin: 0;
 }
 
-@media (min-width: var(--bp-tablet)) {
+@media (min-width: 768px) {
   h2 {
     font-size: 44px;
   } /* tablet */
 }
 
-@media (min-width: var(--bp-desktop)) {
+@media (min-width: 1440px) {
   h2 {
     font-size: 52px;
   } /* desktop */
@@ -85,13 +86,13 @@ h3 {
   margin: 0;
 }
 
-@media (min-width: var(--bp-tablet)) {
+@media (min-width: 768px) {
   h3 {
     font-size: 20px;
   } /* tablet */
 }
 
-@media (min-width: var(--bp-desktop)) {
+@media (min-width: 1440px) {
   h3 {
     font-size: 32px;
   } /* desktop */
@@ -107,13 +108,13 @@ h4 {
   margin: 0;
 }
 
-@media (min-width: var(--bp-tablet)) {
+@media (min-width: 768px) {
   h4 {
     font-size: 18px;
   } /* tablet */
 }
 
-@media (min-width: var(--bp-desktop)) {
+@media (min-width: 1440px) {
   h4 {
     font-size: 26px;
   } /* desktop */
@@ -129,13 +130,13 @@ h5 {
   margin: 0;
 }
 
-@media (min-width: var(--bp-tablet)) {
+@media (min-width: 768px) {
   h5 {
     font-size: 18px;
   } /* tablet */
 }
 
-@media (min-width: var(--bp-desktop)) {
+@media (min-width: 1440px) {
   h5 {
     font-size: 26px;
   } /* desktop */

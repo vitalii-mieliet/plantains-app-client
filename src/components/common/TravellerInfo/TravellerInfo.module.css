@@ -1,0 +1,86 @@
+/* .travellerSection {
+  padding: 32px 0;
+}
+.travellerContainer {
+  padding: 0 32px;
+} */
+.travellerInfo {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 32px 32px 0px;
+  /* width: 100%; */
+  height: auto;
+  gap: 24px;
+}
+
+.avatar {
+  width: 199px;
+  height: 199px;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+.info {
+  width: 100%;
+  /* width: 311px;
+height: 130px; */
+}
+
+.name {
+  font-family: var(--second-family);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 130%;
+  letter-spacing: -0.01em;
+  color: var(--color-scheme-2-text);
+  text-align: center;
+}
+
+.bio {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--color-scheme-2-text);
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .travellerInfo {
+    flex-direction: row;
+    /* width: 704px;
+    height: 199px; */
+  }
+
+  .info {
+    width: 481px;
+    height: 74px;
+  }
+  .name,
+  .bio {
+    text-align: left;
+  }
+}
+@media (min-width: 1440px) {
+  .travellerSection {
+    padding: 48px 0;
+  }
+  .travellerContainer {
+    padding: 0 64px;
+  }
+  /* .travellerInfo {
+    width: 590px;
+    height: 199px;
+  } */
+  .info {
+    width: 367px;
+    height: 150px;
+  }
+  .name {
+    font-size: 32px;
+  }
+  .bio {
+    font-size: 18px;
+  }
+}

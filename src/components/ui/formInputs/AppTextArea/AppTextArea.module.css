@@ -1,0 +1,44 @@
+.textareaWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.textarea {
+  width: 100%;
+  padding: 12px 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid var(--opacity-neutral-darkest-15);
+  background-color: var(--opacity-white-60);
+  transition: border-color var(--transition-base);
+  height: 180px;
+  resize: none;
+  overflow-y: hidden;
+  position: relative;
+}
+
+.textarea:focus {
+  outline: none;
+  border-color: var(--color-royal-blue);
+}
+
+.textarea::placeholder {
+  color: var(--opacity-neutral-darkest-60);
+}
+
+.textareaError {
+  border-color: var(--color-red);
+  color: var(--color-red);
+}
+
+.textareaError:focus {
+  border-color: var(--color-red);
+}
+
+.errorMessage {
+  position: absolute;
+  min-height: 18px; /* зарезервована висота для помилки */
+  bottom: -26px;
+  font-size: 12px;
+  color: var(--color-red);
+}

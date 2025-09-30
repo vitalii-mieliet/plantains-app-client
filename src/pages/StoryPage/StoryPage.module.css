@@ -1,0 +1,9 @@
+  .pageWrapper {
+  padding-top: 40px;
+}
+
+@media (min-width: 768px) {
+  .pageWrapper {
+    padding-top: 60px;
+  }
+}

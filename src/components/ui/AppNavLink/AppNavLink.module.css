@@ -1,0 +1,46 @@
+.navLink {
+  padding: 8px 0px;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--color-scheme-2-text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  outline: none;
+}
+
+.label {
+  border: 1px solid transparent;
+  border-radius: 8px;
+  padding: 0 8px;
+  transition:
+    background-color var(--transition-base),
+    border-color var(--transition-base);
+}
+
+@media (pointer: fine) and (hover: hover) {
+  .navLink:hover .label,
+  .navLink:focus-visible .label {
+    border: 1px solid var(--color-scheme-1-text);
+  }
+}
+
+.navLink:active .label {
+  border-color: var(--color-scheme-1-text);
+  background: var(--color-neutral-lighter);
+}
+
+.active .label {
+  border-color: var(--color-scheme-1-text);
+  background: var(--color-neutral-lighter);
+  font-weight: 500;
+}
+
+@media screen and (min-width: 1440px) {
+  .navLink {
+    font-size: 18px;
+  }
+}

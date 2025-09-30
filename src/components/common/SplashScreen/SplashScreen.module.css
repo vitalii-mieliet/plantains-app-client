@@ -1,0 +1,46 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; 
+  text-align: center;
+  background: var(--color-white); 
+  padding: 20px;
+}
+
+.logoWrapper {
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--color-neutral-darkest);
+  margin-bottom: 20px;
+}
+
+.progressContainer {
+  width: 100%;
+  max-width: 300px;
+}
+
+.progressBar {
+  width: 100%;
+  height: 10px;
+  background: var(--color-neutral-lighter);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-royal-blue-light),var(--color-royal-blue-dark));
+  transition: width 0.3s ease;
+}
+
+.progressText {
+  margin-top: 10px;
+  font-size: 14px;
+  color: var(--color-neutral-dark);
+}
