@@ -2,6 +2,10 @@ import { registerFormSchema } from '../../validation/authFormsValidation.js';
 import { RegisterFormConfig } from '../../constants/formFields.js';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
+import {
+  showErrorToast,
+  showSuccessToast,
+} from '../common/AppToastContainer/toastHelpers.jsx';
 import { registerUser } from '../../redux/auth/operations.js';
 import AuthForm from '../AuthForm/AuthForm.jsx';
 import css from './RegistrationForm.module.css';
@@ -12,16 +16,23 @@ const RegistrationForm = () => {
   const { title, subtitle } = RegisterFormConfig;
 
   const handleRegister = async (values, actions) => {
-    try {
-      const { confirmPassword: _, ...credentials } = values;
+    const { confirmPassword: _, ...credentials } = values;
 
-      dispatch(registerUser(credentials));
+    const { meta, payload } = await dispatch(registerUser(credentials));
 
+    if (meta.requestStatus === 'fulfilled') {
+      showSuccessToast('Успішна реєстрація');
       navigate('/');
-    } catch {
-      console.error('Помилка при реєстрації'); // замінити на тост
-      actions.setSubmitting(false);
+    } else {
+      let message = 'Помилка реєстрації';
+
+      if (payload === 'Email already in use') {
+        message = 'Користувач вже зареєстрований';
+      }
+      showErrorToast(message);
     }
+
+    actions.setSubmitting(false);
   };
   return (
     <div className={css.container}>
@@ -30,6 +41,7 @@ const RegistrationForm = () => {
 
       <AuthForm
         {...RegisterFormConfig}
+        isLogin={false}
         validationSchema={registerFormSchema}
         onSubmitAction={handleRegister}
       />

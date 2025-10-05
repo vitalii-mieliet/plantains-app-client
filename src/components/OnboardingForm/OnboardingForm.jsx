@@ -21,8 +21,6 @@ export default function OnboardingForm() {
   // Беремо дані користувача з Redux
   const user = useSelector(selectUserProfile);
 
-  console.log(user);
-
   // preview потрібен тільки для нового фото
   const [preview, setPreview] = useState(null);
 

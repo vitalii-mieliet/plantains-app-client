@@ -16,7 +16,7 @@ export const registerUser = createAsyncThunk(
       await dispatch(loginUser(loginCredentials));
     } catch (error) {
       return rejectWithValue(
-        error.response?.data?.message || 'Registration failed'
+        error.response?.data?.data?.message || 'Registration failed'
       );
     }
   }
@@ -31,7 +31,9 @@ export const loginUser = createAsyncThunk(
 
       setAccessToken(data.data.accessToken);
     } catch (error) {
-      return rejectWithValue(error.response?.data?.message || 'Login failed');
+      return rejectWithValue(
+        error.response?.data?.data?.message || 'Login error'
+      );
     }
   }
 );
@@ -89,6 +91,34 @@ export const loginWithGoogleCode = createAsyncThunk(
     } catch (error) {
       return rejectWithValue(
         error.response?.data?.message || 'Login with Google failed'
+      );
+    }
+  }
+);
+
+// SEND RESET PASSWORD EMAIL
+export const sendResetEmail = createAsyncThunk(
+  'auth/sendResetEmail',
+  async (email, { rejectWithValue }) => {
+    try {
+      await api.post(AUTH_ENDPOINTS.SEND_RESET_EMAIL, email);
+    } catch (error) {
+      return rejectWithValue(
+        error.response?.data?.data?.message || 'Send Reset Email Failed'
+      );
+    }
+  }
+);
+
+// RESET PASSWORD
+export const resetPassword = createAsyncThunk(
+  'auth/resetPassword',
+  async (credentials, { rejectWithValue }) => {
+    try {
+      await api.post(AUTH_ENDPOINTS.RESET_PASSWORD, credentials);
+    } catch (error) {
+      return rejectWithValue(
+        error.response?.data?.data?.message || 'Reset Pawword Failed'
       );
     }
   }

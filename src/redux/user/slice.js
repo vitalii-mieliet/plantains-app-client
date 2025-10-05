@@ -104,7 +104,8 @@ const userSlice = createSlice({
       })
       .addCase(onboardingUser.fulfilled, (state, action) => {
         state.isLoading = false;
-        state.user = action.payload;
+        state.userData = { ...state.userData, ...action.payload };
+        console.log(action.payload);
       })
       .addCase(onboardingUser.rejected, (state, action) => {
         state.isLoading = false;

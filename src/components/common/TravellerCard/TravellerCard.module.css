@@ -11,6 +11,25 @@
   min-height: 363px;
 }
 
+.photoWrap {
+  width: 112px;
+  height: 112px;
+  margin-right: auto;
+  border-radius: 50%;
+  margin-bottom: 24px;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imgPlaceholder {
+  width: 100%;
+  object-fit: cover;
+  height: auto;
+}
+
 .bio {
   display: -webkit-box;
   -webkit-line-clamp: 3;
@@ -26,18 +45,6 @@
 
 .btn a {
   height: 48px;
-}
-
-@media (min-width: 768px) {
-  .travelerInfoCard {
-    min-height: 384px;
-  }
-}
-.imgPlaceholder {
-  border-radius: 50%;
-  margin-bottom: 24px;
-  margin-right: auto;
-  min-height: 112px;
 }
 
 .infoBlock {
@@ -62,4 +69,10 @@
 .description {
   font-size: 18px;
   margin-bottom: 16px;
+}
+
+@media (min-width: 768px) {
+  .travelerInfoCard {
+    min-height: 384px;
+  }
 }

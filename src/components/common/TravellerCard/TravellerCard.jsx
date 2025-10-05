@@ -11,13 +11,15 @@ function TravellerCard({ userData = {} }) {
 
   return (
     <article className={css.travelerInfoCard}>
-      <img
-        src={avatar || avatarPlaceholder}
-        width={112}
-        height={112}
-        alt={name || 'Avatar'}
-        className={css.imgPlaceholder}
-      />
+      <dev className={css.photoWrap}>
+        <img
+          src={avatar || avatarPlaceholder}
+          width={112}
+          height={112}
+          alt={name || 'Avatar'}
+          className={css.imgPlaceholder}
+        />
+      </dev>
       <div className={css.infoBlock}>
         <h2 className={css.name}>{displayName || 'Full name'}</h2>
         <p className={css.bio}>

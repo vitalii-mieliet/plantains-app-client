@@ -5,6 +5,7 @@ import AppButton from '../ui/AppButton/AppButton.jsx';
 import useBreakpoint from '../../hooks/useBreakpoint.js';
 import { useSelector } from 'react-redux';
 import { selectAuthIsLoading } from '../../redux/auth/selectors.js';
+import AppNavLink from '../ui/AppNavLink/AppNavLink.jsx';
 
 const FormikTextInput = ({ name, type, placeholder, autoComplete }) => {
   const [field, meta] = useField(name);
@@ -15,8 +16,8 @@ const FormikTextInput = ({ name, type, placeholder, autoComplete }) => {
       type={type}
       placeholder={placeholder}
       autoComplete={autoComplete}
-      error={meta.touched && !!meta.error}
-      errorMessage={meta.touched ? meta.error : ''}
+      // error={meta.touched && !!meta.error}
+      // errorMessage={meta.touched ? meta.error : ''}
       aria-invalid={meta.touched && !!meta.error}
       aria-describedby={`${name}-error`}
     />
@@ -24,6 +25,7 @@ const FormikTextInput = ({ name, type, placeholder, autoComplete }) => {
 };
 
 const AuthForm = ({
+  isLogin,
   fields,
   initialValues,
   validationSchema,
@@ -77,6 +79,13 @@ const AuthForm = ({
                 </div>
               )
             )}
+            {isLogin && (
+              <AppNavLink
+                to="/auth/reset/sent-reset-email"
+                label="Забув пароль"
+              />
+            )}
+
             <AppButton
               size={isMobile ? 'sm' : 'md'}
               fullWidth

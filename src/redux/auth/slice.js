@@ -5,6 +5,8 @@ import {
   refreshUser,
   getGoogleAuthUrl,
   loginWithGoogleCode,
+  sendResetEmail,
+  resetPassword,
 } from './operations';
 import { fetchCurrentUser } from '../user/operations';
 
@@ -15,6 +17,8 @@ const initialState = {
   isLoggedIn: false,
   error: null,
   url: null,
+  emailSent: false,
+  resetSuccess: false,
 };
 
 const authSlice = createSlice({
@@ -53,6 +57,7 @@ const authSlice = createSlice({
       })
       .addCase(loginUser.rejected, (state, action) => {
         state.isLoading = false;
+        state.isLoggedIn = false;
         state.error = action.payload;
       })
 
@@ -116,6 +121,40 @@ const authSlice = createSlice({
       .addCase(loginWithGoogleCode.rejected, (state, action) => {
         state.isLoading = false;
         state.error = action.payload;
+      })
+
+      // --- Send Reset Password Email ---
+      .addCase(sendResetEmail.pending, (state) => {
+        state.isLoading = true;
+        state.error = null;
+        state.emailSent = false;
+      })
+      .addCase(sendResetEmail.fulfilled, (state) => {
+        state.isLoading = false;
+        state.error = null;
+        state.emailSent = true;
+      })
+      .addCase(sendResetEmail.rejected, (state, action) => {
+        state.isLoading = false;
+        state.error = action.payload;
+        state.emailSent = false;
+      })
+
+      // --- Reset Password ---
+      .addCase(resetPassword.pending, (state) => {
+        state.isLoading = true;
+        state.error = null;
+        state.resetSuccess = false;
+      })
+      .addCase(resetPassword.fulfilled, (state) => {
+        state.isLoading = false;
+        state.error = null;
+        state.resetSuccess = true;
+      })
+      .addCase(resetPassword.rejected, (state, action) => {
+        state.isLoading = false;
+        state.error = action.payload;
+        state.resetSuccess = false;
       });
   },
 });

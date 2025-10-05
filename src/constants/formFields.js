@@ -71,3 +71,51 @@ export const LoginFormConfig = {
     password: '',
   },
 };
+
+export const SentResetFormConfig = {
+  title: 'Запит на скид пароля',
+  subtitle:
+    'Не турбуйтеся, паролі забуваються:) Введіть вашу пошту і ми відправимо на неї посилання на скид пароля!',
+  submitText: 'Відправити',
+  fields: [
+    {
+      name: 'email',
+      type: 'email',
+      label: 'Email',
+      placeholder: 'Введіть email',
+      required: true,
+      autoComplete: 'email',
+    },
+  ],
+  initialValues: {
+    email: '',
+  },
+};
+
+export const ResetPasswordFormConfig = {
+  title: 'Скид пароля',
+  subtitle: 'Створіть новий пароль',
+  submitText: 'Підтвердити',
+  fields: [
+    {
+      name: 'password',
+      type: 'password',
+      label: 'Пароль',
+      placeholder: 'Введіть пароль',
+      required: true,
+      autoComplete: 'new-password',
+    },
+    {
+      name: 'confirmPassword',
+      type: 'password',
+      label: 'Підтвердження пароля',
+      placeholder: 'Повторіть пароль',
+      required: true,
+      autoComplete: 'new-password',
+    },
+  ],
+  initialValues: {
+    password: '',
+    confirmPassword: '',
+  },
+};

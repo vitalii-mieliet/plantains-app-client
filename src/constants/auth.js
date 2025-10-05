@@ -8,4 +8,6 @@ export const AUTH_ENDPOINTS = {
   REFRESH: '/auth/refresh',
   GET_GOOGLE_AUTH_URL: '/auth/google/get-oauth-url',
   LOGIN_WITH_GOOGLE: '/auth/google/confirm-oauth',
+  SEND_RESET_EMAIL: '/auth/send-reset-email',
+  RESET_PASSWORD: '/auth/reset-password',
 };
